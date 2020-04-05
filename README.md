@@ -23,7 +23,7 @@ Example of cover:
 
 ```
 apt install python3
-apt install ffmpe
+apt install ffmpeg
 pip3 install -r requirements.txt 
 ```
 

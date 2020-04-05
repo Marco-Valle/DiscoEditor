@@ -5,6 +5,13 @@ This script crate a cover with the given parameters, if you want you can stop th
 
 You could append a logo file with black or white backgroud as the black logo of example. The software'll replace black or white with custom disco color. See the configuration.py to all possible options.
 
+
+
+Example of cover:
+
+![Example of cover](https://github.com/Marco-Valle/DiscoEditor/blob/master/cover.png)
+
+
 ### Prerequisites
 
 1) Python 3

@@ -3,6 +3,7 @@ This is Python 3 software to make a videos with rotating disco and then syncroni
 This idea was born from my necessity to create funny videos for my dj set, but I coudn't find any simple software on internet that could do this.
 This script crate a cover with the given parameters, if you want you can stop the process to customize the cover yourself with other software (es. Gimp). When you're ready it takes the cover image and rotate it to create a rotating disco movie.
 
+You could append a logo file with black or white backgroud as the black logo of example. The software'll replace black or white with custom disco color. See the configuration.py to all possible options.
 
 ### Prerequisites
 

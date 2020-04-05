@@ -11,6 +11,9 @@ Example of cover:
 
 ![Example of cover](https://github.com/Marco-Valle/DiscoEditor/blob/master/cover.png)
 
+* You can see an example of video on Instagram:
+https://www.instagram.com/tv/B-amAukJg2f/
+
 
 ### Prerequisites
 

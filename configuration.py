@@ -9,7 +9,7 @@ This is an example of the configuration module of disco editor
 # Output file name (mp4 or avi) (don't use output.ext, the programme use it for temp file)
 filename = 'out.mp4'
 
-#Cover picture filename
+# Cover picture filename
 cover_filename = 'cover.png'
 
 # Logo filename (use None to no logo)

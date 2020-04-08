@@ -318,7 +318,7 @@ class editor:
         self.p.filename = 'tmp_cover.png'
         print("Saving the image of cover > {}\nWhen you're ready press Enter (be sure to have saved the file with same name)".format(self.p.filename))
         self.p.save_img(filename=self.p.filename)
-        tmp = input("Ready?")
+        input("Ready?")
         self.p.import_img(force_import=True)
         try:    remove(self.p.filename)
         except: pass

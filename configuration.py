@@ -1,10 +1,10 @@
 #!/usr/bin/python
 # -*- coding: utf-8 -*-
 
-'''
+"""
 This is an example of the configuration module of disco editor
 
-'''
+"""
 
 # Output file name (mp4 or avi) (don't use output.ext, the programme use it for temp file)
 filename = 'out.mp4'

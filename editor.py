@@ -51,7 +51,6 @@ class picture:
             # Create mask
             mask = np.zeros((self.height, self.width), np.uint8)
             edges = cv2.Canny(thresh, 100, 200)
-            cimg = cv2.cvtColor(self.gray, cv2.COLOR_GRAY2BGR)
             circles = cv2.HoughCircles(edges, cv2.HOUGH_GRADIENT, 1, 10000, param1=50, param2=30, minRadius=0, maxRadius=0)
             for i in circles[0, :]:
                 i[2] = i[2] + 4
@@ -183,7 +182,7 @@ class video:
         # Moviepy caused some problem, so I decided to use terminal based FFMPEG
         print("\n\n")
         ext = self.filename.split('.')[1]
-        tmp_filename = 'output.{}'.format(self.filename.split('.')[1])
+        tmp_filename = 'output.{}'.format(ext)
         try:    remove(tmp_filename) # Check if there's any old file and remove it
         except: pass
         try:    system("ffmpeg -i {} -i {} -c copy -map 0:v:0 -map 1:a:0 -shortest {}".format(self.filename, self.music_filename, tmp_filename))
@@ -191,7 +190,7 @@ class video:
         try:
             remove(self.filename)        
             rename(tmp_filename, self.filename)
-        except: print("Something is gone wrong at the end, check if there's file names output.extension")
+        except: print("Something is gone wrong at the end, check if there's file names output.{}".format(ext))
 
     def create(self, filename="out.mp4"):
         # Check if frames shape and format size are the same
@@ -228,8 +227,8 @@ class video:
 class editor:
 
     def __init__(self, configuration_module, filename='example.png'):
-	    # User module data
-        try:
+	# User module data
+	try:
             self.filename = configuration_module.filename
             self.logo_filename = configuration_module.logo_filename # The filename of the logo to put on cover
             self.cover_filename = configuration_module.cover_filename
@@ -292,7 +291,7 @@ class editor:
         lower = np.array(0, dtype = "uint8") if black_background else np.array(255-tolerance, dtype = "uint8")
         upper = np.array(tolerance, dtype = "uint8") if black_background else np.array(255, dtype = "uint8")
 	# Find the colors within the specified boundaries and apply the mask
-        mask = cv2.inRange(self.logo.img, lower, upper)
+	mask = cv2.inRange(self.logo.img, lower, upper)
         self.logo.img[mask>0] = disco_BGR # Replace the logo background with disco's color
         x0 = int(self.result.shape[1]/2 - self.logo.img.shape[1]/2)
         x1 = int(self.result.shape[1]/2 + self.logo.img.shape[1]/2)
@@ -363,5 +362,3 @@ if __name__ == '__main__':
         print("Usage: python3 editor.py configuration")
         exit(0)
     e.run()
-
-			

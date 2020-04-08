@@ -228,7 +228,7 @@ class editor:
 
     def __init__(self, configuration_module, filename='example.png'):
 	# User module data
-	try:
+        try:
             self.filename = configuration_module.filename
             self.logo_filename = configuration_module.logo_filename # The filename of the logo to put on cover
             self.cover_filename = configuration_module.cover_filename
@@ -291,7 +291,7 @@ class editor:
         lower = np.array(0, dtype = "uint8") if black_background else np.array(255-tolerance, dtype = "uint8")
         upper = np.array(tolerance, dtype = "uint8") if black_background else np.array(255, dtype = "uint8")
 	# Find the colors within the specified boundaries and apply the mask
-	mask = cv2.inRange(self.logo.img, lower, upper)
+        mask = cv2.inRange(self.logo.img, lower, upper)
         self.logo.img[mask>0] = disco_BGR # Replace the logo background with disco's color
         x0 = int(self.result.shape[1]/2 - self.logo.img.shape[1]/2)
         x1 = int(self.result.shape[1]/2 + self.logo.img.shape[1]/2)
@@ -349,6 +349,7 @@ class editor:
         if self.ready is False: return False
         self.p.save_img(filename=self.cover_filename, img=cover)
         self.v.create(filename=self.filename)
+
         
 if __name__ == '__main__':
     from sys import argv, exit
@@ -356,7 +357,7 @@ if __name__ == '__main__':
     try: rmtree("__pycache__") # Remove cache to reload configuration file
     except: pass
     try:
-        cnf = importlib.import_module(argv[1])
+        cnf = importlib.import_module(argv[1].replace('.py',''))
         e = editor(configuration_module=cnf)
     except:
         print("Usage: python3 editor.py configuration")

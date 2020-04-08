@@ -118,7 +118,7 @@ class picture:
             if img is None: img = self.img
             img_array = [img] # If we have single image it creates one element array
         for i in img_array:
-            cv2.imshow('detected', i)
+            cv2.imshow(label, i)
             key = cv2.waitKey(0)
             cv2.destroyAllWindows()
         if len(img_array) == 1: return key # If we have single image we return the key pressed
@@ -227,7 +227,7 @@ class video:
 class editor:
 
     def __init__(self, configuration_module, filename='example.png'):
-	# User module data
+        # User module data
         try:
             self.filename = configuration_module.filename
             self.logo_filename = configuration_module.logo_filename # The filename of the logo to put on cover

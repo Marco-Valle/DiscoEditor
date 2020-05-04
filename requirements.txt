@@ -1,5 +1,5 @@
 importlib==1.0.4
 imutils==0.5.3
-numpy==1.18.2
+numpy==1.18.4
 progressbar==2.5
 opencv-python==4.2.0.34

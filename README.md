@@ -1,9 +1,9 @@
 # DiscoEditor
-This is Python 3 software to make a videos with rotating disco and then syncronize the audio file.
-This idea was born from my necessity to create funny videos for my dj set, but I coudn't find any simple software on internet that could do this.
-This script crate a cover with the given parameters, if you want you can stop the process to customize the cover yourself with other software (es. Gimp). When you're ready it takes the cover image and rotate it to create a rotating disco movie.
+This is a Python 3 software to make a video of a rotating disco and then syncronize the audio file with it.
+This idea was born from my necessity to create funny videos for my dj set, but I coudn't find any simple software on internet that can easly do this.
+This script create a cover with the given parameters, if you want you can stop the process to customize the cover yourself with other software (es. Gimp). When you're ready it takes the cover image and rotate it to create the rotating disco movie.
 
-You could append a logo file with black or white backgroud as the black logo of example. The software'll replace black or white with custom disco color. See the configuration.py to all possible options.
+You can append a logo file with black or white backgroud as the black logo in the example. The software'll replace the black or white color-space with custom color which you have choosen. See the configuration.py to all possible options.
 
 
 

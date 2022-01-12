@@ -1,9 +1,11 @@
 # DiscoEditor
-This is a Python 3 software to make a video of a rotating disco and then syncronize the audio file with it.
-This idea was born from my necessity to create funny videos for my dj set, but I coudn't find any simple software on internet that can easly do this.
-This script create a cover with the given parameters, if you want you can stop the process to customize the cover yourself with other software (es. Gimp). When you're ready it takes the cover image and rotate it to create the rotating disco movie.
+This is a Python 3 software to make a movide of a rotating disco and then, if required, syncronize an audio file with the video.
+This idea was born from my necessity to create some funny videos for my dj sets, but I coudn't find any simple software on internet that can easily do this.
+This script creates a cover with the given parameters, if you want you can stop the process to customize the cover yourself with other softwares (eg. Gimp).
+When you're ready it takes the cover image and rotate it to create the rotating disco movie.
 
-You can append a logo file with black or white backgroud as the black logo in the example. The software'll replace the black or white color-space with custom color which you have choosen. See the configuration.py to all possible options.
+You can append a logo file with black or white backgroud, as the black logo in the example.
+The software will replace the black or white color-space with custom color which you have choosen.
 
 
 Example of the cover:
@@ -31,7 +33,7 @@ pip3 install -r requirements.txt
 
 ## How it works
 
-Modify the configuration-file.py and then run Python script.
+Modify the configuration file and then run the Python script as follow.
 
 ```
 python3 editor.py cofiguration-file.txt OPTIONAL_FFMPEG_PATH

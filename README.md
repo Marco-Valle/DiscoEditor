@@ -6,8 +6,7 @@ This script create a cover with the given parameters, if you want you can stop t
 You can append a logo file with black or white backgroud as the black logo in the example. The software'll replace the black or white color-space with custom color which you have choosen. See the configuration.py to all possible options.
 
 
-
-Example of cover:
+Example of the cover:
 
 ![Example of cover](https://github.com/Marco-Valle/DiscoEditor/blob/master/cover.png)
 
@@ -18,8 +17,8 @@ https://www.instagram.com/tv/B-amAukJg2f/
 ### Prerequisites
 
 1) Python 3
-2) FFmpeg (better the version 4)
-3) Pip3 (see requirequirements.txt)
+2) ffmpeg
+3) pip3 (see requirequirements.txt)
 
 
 ### Installing
@@ -35,7 +34,7 @@ pip3 install -r requirements.txt
 Modify the configuration-file.py and then run Python script.
 
 ```
-python3 editor.py cofiguration-file
+python3 editor.py cofiguration-file.txt OPTIONAL_FFMPEG_PATH
 ```
 
 ## Authors

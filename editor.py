@@ -161,7 +161,6 @@ class Editor:
             remove('tmp_cover.png')
         except Exception as e:
             print("Can't delete tmp file\nException:\n{}".format(e))
-            pass
 
     @staticmethod
     def get_configuration(file):
